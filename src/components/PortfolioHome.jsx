@@ -75,68 +75,65 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
- <section id="portfolio" className="py-12 bg-[#1a1a1a]">
-  <div className="max-w-7xl mx-auto px-4">
-    {/* Scrolling Heading */}
-    <div className="overflow-hidden min-h-[6rem] flex items-center mb-10">
-      <h2 className="inline-block animate-marquee text-6xl md:text-7xl font-heading font-bold text-white whitespace-nowrap leading-[1.2] pb-1">
-        Web Design & Development
-      </h2>
-    </div>
+    <section id="portfolio" className="py-12 bg-white dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Scrolling Heading */}
+        <div className="overflow-hidden min-h-[6rem] flex items-center mb-10">
+          <h2 className="inline-block animate-marquee text-6xl md:text-7xl font-heading font-bold text-gray-900 dark:text-white whitespace-nowrap leading-[1.2] pb-1">
+            Web Design & Development
+          </h2>
+        </div>
 
-    {/* Portfolio Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      {portfolioItems.map(({ title, subtitle, createdBy, url, imageUrl, hoverImageUrl }, index) => (
+        {/* Portfolio Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {portfolioItems.map(({ title, subtitle, createdBy, url, imageUrl, hoverImageUrl }, index) => (
+            <a
+              key={index}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block rounded-lg overflow-hidden aspect-square shadow-md group cursor-pointer"
+            >
+              {/* Portfolio item content stays exactly the same */}
+              <div className="absolute inset-0">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
+                  style={{ backgroundImage: `url(${imageUrl})` }}
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.99) 100%)",
+                  }}
+                />
+              </div>
+
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${hoverImageUrl || imageUrl})` }}
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30" />
+              </div>
+
+              <div className="absolute inset-0 flex flex-col justify-end items-center p-4 pb-20 text-center transition-opacity duration-300 group-hover:opacity-0">
+                <h3 className="text-white text-xl md:text-2xl font-semibold font-heading mb-2">{title}</h3>
+                <p className="text-white text-sm mb-1">{subtitle}</p>
+                <p className="text-white text-xs italic">{createdBy}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex justify-center mt-12">
         <a
-          key={index}
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative block rounded-lg overflow-hidden aspect-square shadow-md group cursor-pointer"
-          >
-          {/* Default background with dark gradient overlay */}
-          <div className="absolute inset-0">
-            <div
-            className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
-            style={{ backgroundImage: `url(${imageUrl})` }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.99) 100%)"
-              }}
-            />
-          </div>
-
-          {/* Hover background with dark overlay */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${hoverImageUrl || imageUrl})` }}
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-30" />
-          </div>
-
-          {/* Text overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end items-center p-4 pb-20 text-center transition-opacity duration-300 group-hover:opacity-0">            <h3 className="text-white text-xl md:text-2xl font-semibold font-heading mb-2">{title}</h3>
-            <p className="text-white text-sm mb-1">{subtitle}</p>
-            <p className="text-white text-xs italic">{createdBy}</p>
-          </div>
+          href="/portfolio"
+          className="bg-[#0060e3] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105 transition transform duration-200"
+        >
+          See more projects
         </a>
-      ))}
-    </div>
-  </div>
-
-  <div class="flex justify-center mt-12">       
-    <a
-    href="/portfolio"
-    className="bg-[#0060e3] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105 transition transform duration-200"
-    >
-      See more projects
-      </a>
-  </div>
-
-</section>
-
+      </div>
+    </section>
   );
 }

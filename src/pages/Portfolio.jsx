@@ -291,17 +291,18 @@ export default function Portfolio() {
 
       <Header />
 
-      <section id="portfolio" className="py-12 bg-[#1a1a1a]">
+      <section id="portfolio" className="py-12 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4">
           <div className="overflow-hidden min-h-[6rem] flex flex-col items-center mb-10 mt-20 text-center">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-white text-center">
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 dark:text-white text-center">
               Featured Work
             </h1>   
-            <p className="text-xl mt-4 text-white font-body">
+            <p className="text-xl mt-4 font-body text-gray-700 dark:text-gray-300">
               From local businesses to growing brands, these are a few of the sites I’ve had the chance to bring to life.
             </p>
           </div>
 
+          {/* Portfolio items grid remains unchanged */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {portfolioItems.map(({ title, subtitle, createdBy, url, imageUrl, hoverImageUrl }, index) => (
               <a
@@ -311,7 +312,6 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="relative block rounded-lg overflow-hidden aspect-square shadow-md group cursor-pointer"
               >
-                {/* Default background */}
                 <div className="absolute inset-0">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
@@ -323,7 +323,6 @@ export default function Portfolio() {
                   />
                 </div>
 
-                {/* Hover background */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                   <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -332,7 +331,6 @@ export default function Portfolio() {
                   <div className="absolute inset-0 bg-black bg-opacity-30" />
                 </div>
 
-                {/* Text overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end items-center p-4 pb-20 text-center transition-opacity duration-300 group-hover:opacity-0">
                   <h3 className="text-white text-xl md:text-2xl font-semibold mb-2">{title}</h3>
                   <p className="text-white text-sm mb-1">{subtitle}</p>
@@ -344,64 +342,11 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/*
-      <section id="dealeron" className="py-12 bg-gray-100 text-gray-900">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="overflow-hidden min-h-[6rem] flex flex-col items-center mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 text-center">
-              Professional Highlights: DealerOn
-            </h2>
-            <p className="text-lg mt-4 text-gray-700 font-body max-w-2xl text-center">
-              Selected work from my professional web development roles, including content migrations, homepage redesigns, and additional bonus design concepts.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {dealerOnWork.map(({ title, subtitle, description, url, imageUrl, hoverImageUrl }, index) => (
-              <a
-                key={index}
-                href={url || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative block rounded-lg overflow-hidden aspect-square shadow-md group cursor-pointer"
-              >
-                <div className="absolute inset-0">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
-                    style={{ backgroundImage: `url(${imageUrl})` }}
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.99) 100%)" }}
-                  />
-                </div>
-
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${hoverImageUrl || imageUrl})` }}
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-30" />
-                </div>
-
-                <div className="absolute inset-0 flex flex-col justify-end items-center p-4 pb-20 text-center transition-opacity duration-300 group-hover:opacity-0">
-                  <h3 className="text-gray-900 text-xl md:text-2xl font-semibold mb-2">{title}</h3>
-                  <p className="text-gray-700 text-sm mb-1">{subtitle}</p>
-                  <p className="text-gray-600 text-xs italic">{description}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      */}
-
-      <section className="bg-gray-100 text-gray-900">
+      <section className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <Contact />
       </section>
 
-      <section className="bg-[#1a1a1a] text-white">
+      <section className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900">
         <Connect />
       </section>
     </>

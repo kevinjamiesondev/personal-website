@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="bg-white py-16 px-4 text-center text-gray-900">
+    <section className="bg-white dark:bg-gray-50 py-16 px-4 text-center text-gray-900 dark:text-gray-900 transition-colors duration-300">
       <div className="max-w-[70rem] mx-auto space-y-6">
         <p className="text-lg leading-relaxed font-body">
           I’m Kevin Jamieson, a front-end web developer and designer based in Northwest Arkansas. 

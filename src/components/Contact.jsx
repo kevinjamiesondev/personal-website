@@ -1,6 +1,9 @@
 export default function Contact() {
   return (
-    <section id="contact" className="max-w-5xl mx-auto py-16 px-6 bg-gray-100 text-gray-900 scroll-mt-20">
+    <section
+      id="contact"
+      className="max-w-5xl mx-auto py-16 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scroll-mt-20"
+    >
       <h2 className="text-5xl font-heading font-bold mb-6 text-center">
         Want to know more?
       </h2>
@@ -22,7 +25,7 @@ export default function Contact() {
             name="name"
             placeholder="Your Name"
             required
-            className="w-full px-4 py-2 bg-white text-black border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a]"
+            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-[#0060e3]"
           />
         </div>
 
@@ -35,7 +38,7 @@ export default function Contact() {
             name="email"
             placeholder="Your Email"
             required
-            className="w-full px-4 py-2 bg-white text-black border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a]"
+            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-[#0060e3]"
           />
         </div>
 
@@ -48,7 +51,7 @@ export default function Contact() {
             rows="5"
             placeholder="Your Message"
             required
-            className="w-full px-4 py-2 bg-white text-black border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a]"
+            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-[#0060e3]"
           ></textarea>
         </div>
 
@@ -63,7 +66,6 @@ export default function Contact() {
           Send message
         </button>
       </form>
-
     </section>
   );
 }

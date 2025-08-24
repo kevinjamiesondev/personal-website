@@ -10,7 +10,7 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+ 
   // Close menu on window resize
   useEffect(() => {
     const closeMenuOnResize = () => {
@@ -31,8 +31,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-black shadow-md" : "bg-black/70"
+      className={`fixed top-0 left-0 right-0 z-50 ${
+        scrolled
+          ? "bg-white/90 dark:bg-gray-900 shadow-md"
+          : "bg-white/70 dark:bg-gray-900/70"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between p-4">
@@ -46,30 +48,30 @@ export default function Header() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 text-white font-heading">
+        <nav className="hidden md:flex space-x-6 font-heading">
           <a
             href="/portfolio"
-            className="relative text-xl font-bold lowercase hover:text-white
+            className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
                        after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                       after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             portfolio
           </a>
 
           <a
             href="/hosting"
-            className="relative text-xl font-bold lowercase hover:text-white
+            className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
                        after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                       after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             website hosting
           </a>
 
           <a
             href="#contact"
-            className="relative text-xl font-bold lowercase hover:text-white
+            className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
                        after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                       after:bg-white after:transition-all hover:after:w-full"
+                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             contact
           </a>
@@ -78,7 +80,7 @@ export default function Header() {
             href="https://www.linkedin.com/in/kevin-jamieson-9417828a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-white px-3 py-1 lowercase rounded-md border-2 border-blue-700 animate-pulse-blue hover:bg-blue-600 hover:text-white transition"
+            className="font-bold text-gray-900 dark:text-gray-100 px-3 py-1 lowercase rounded-md border-2 border-blue-700 dark:border-blue-400 animate-pulse-blue hover:bg-blue-600 dark:hover:bg-[#0060e3] hover:text-white transition"
           >
             available for work
           </a>
@@ -86,22 +88,22 @@ export default function Header() {
 
         {/* Mobile Hamburger Button */}
         <button
-          className="md:hidden flex flex-col justify-center bg-black/90 items-center space-y-1 focus:outline-none"
+          className="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none bg-white/90 dark:bg-gray-900/90 p-2 rounded"
           aria-label="Toggle menu"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span
-            className={`block h-0.5 w-6 bg-white transition-transform duration-300 ${
+            className={`block h-0.5 w-6 bg-gray-900 dark:bg-gray-100 transition-transform duration-300 ${
               isOpen ? "rotate-45 translate-y-1.5" : ""
             }`}
           ></span>
           <span
-            className={`block h-0.5 w-6 bg-white transition-opacity duration-300 ${
+            className={`block h-0.5 w-6 bg-gray-900 dark:bg-gray-100 transition-opacity duration-300 ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           ></span>
           <span
-            className={`block h-0.5 w-6 bg-white transition-transform duration-300 ${
+            className={`block h-0.5 w-6 bg-gray-900 dark:bg-gray-100 transition-transform duration-300 ${
               isOpen ? "-rotate-45 -translate-y-1.5" : ""
             }`}
           ></span>
@@ -110,24 +112,24 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="absolute top-full left-0 right-0 bg-black/90 flex flex-col space-y-4 p-6 md:hidden text-center z-40">
+        <nav className="absolute top-full left-0 right-0 bg-white/90 dark:bg-gray-900/90 flex flex-col space-y-4 p-6 md:hidden text-center z-40">
           <a
             href="/portfolio"
-            className="text-white text-xl"
+            className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             portfolio
           </a>
           <a
             href="/hosting"
-            className="text-white text-xl"
+            className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             website hosting
           </a>
           <a
             href="#contact"
-            className="text-white text-xl"
+            className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             contact
@@ -136,7 +138,7 @@ export default function Header() {
             href="https://www.linkedin.com/in/kevin-jamieson-9417828a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white px-4 py-2 rounded-md border-2 border-blue-500 animate-pulse-blue hover:bg-blue-500 hover:text-white transition"
+            className="inline-block text-gray-900 dark:text-gray-100 px-4 py-2 rounded-md border-2 border-blue-500 dark:border-blue-400 animate-pulse-blue hover:bg-blue-500 dark:hover:bg-blue-400 hover:text-white transition"
             onClick={() => setIsOpen(false)}
           >
             available for work

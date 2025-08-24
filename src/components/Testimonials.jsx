@@ -67,7 +67,7 @@ export default function TestimonialsSlider() {
   };
 
   return (
-    <section className="w-full bg-[#1a1a1a] text-white font-body py-12 px-4">
+    <section className="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-body py-12 px-4">
       <div className="max-w-6xl mx-auto relative overflow-visible">
         <h2 className="text-5xl font-heading font-bold text-center mb-8">
           Professional Feedback
@@ -86,7 +86,7 @@ export default function TestimonialsSlider() {
             style={{ zIndex: 2 }}
           >
             <svg
-              className="w-8 h-8 sm:w-10 sm:h-10 stroke-white"
+              className="w-8 h-8 sm:w-10 sm:h-10 stroke-gray-900 dark:stroke-white"
               fill="none"
               strokeWidth="2"
               strokeLinecap="round"
@@ -98,7 +98,7 @@ export default function TestimonialsSlider() {
           </button>
 
           {/* Testimonial Card */}
-          <div className="text-center px-4 py-8 bg-[#2a2a2a] rounded-lg shadow-lg w-full">
+          <div className="text-center px-4 py-8 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg w-full">
             <p
               className="text-md sm:text-base md:text-lg italic mb-4"
               dangerouslySetInnerHTML={{
@@ -116,7 +116,7 @@ export default function TestimonialsSlider() {
             style={{ zIndex: 2 }}
           >
             <svg
-              className="w-8 h-8 sm:w-10 sm:h-10 stroke-white"
+              className="w-8 h-8 sm:w-10 sm:h-10 stroke-gray-900 dark:stroke-white"
               fill="none"
               strokeWidth="2"
               strokeLinecap="round"
