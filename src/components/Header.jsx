@@ -30,13 +30,13 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 ${
-        scrolled
-          ? "bg-white/90 dark:bg-gray-900 shadow-md"
-          : "bg-white/70 dark:bg-gray-900/70"
-      }`}
-    >
+  <header
+    className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled
+        ? "bg-white dark:bg-gray-900 shadow-md"
+        : "bg-white/0 dark:bg-gray-900/0"
+    }`}
+  >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between p-4">
         {/* Logo */}
         <a href="/">

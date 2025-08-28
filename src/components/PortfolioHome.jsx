@@ -1,13 +1,29 @@
 const portfolioItems = [
   {
+    title: "Northwest Arkansas Pool & Spa",
+    subtitle: "Website Development",
+    createdBy: "Freelance Project",
+    url: "https://nwapoolandspa.com/",
+    imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwaps_cover.webp",
+    hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwa-pool-spa_img.webp",
+  },  
+  {
     title: "Arkansas Wildlife Federation",
     subtitle: "Website Development",
     createdBy: "Built while working full time at a local agency",
     url: "https://arwild.org/",
     imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/ar-wild_cover-scaled.jpg",
     hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/mediamodifier_image.jpeg",
+  },  
+  {
+    title: "Countertop World",
+    subtitle: "Website Development",
+    createdBy: "Built while working full time at a local agency",
+    url: "https://countertopworldar.com/",
+    imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/counter_cover.png",
+    hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/cw_1.jpeg",
   },
-   {
+  {
     title: "Harvest Group",
     subtitle: "Website Development",
     createdBy: "Built while working full time at a local agency",
@@ -64,12 +80,20 @@ const portfolioItems = [
     hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/07/wfms_portfolio.png",
   },
   {
-    title: "NWA DNA Testing",
+    title: "Ascend Fabrication",
     subtitle: "Website Development",
     createdBy: "Built while working full time at a local agency",
-    url: "https://nwadna.com/",
-    imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwadna_cover.png",
-    hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/nwadna_portfolio.png",
+    url: "https://ascendfab.com/",
+    imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/ascend-fab_cover.png",
+    hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/07/ascend_fab_portfolio.png",
+  },
+  {
+    title: "First National Bank of NWA",
+    subtitle: "Website Development",
+    createdBy: "Built while working full time at a local agency",
+    url: "https://fnbnwa.com/",
+    imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/fnbnwa_cover.png",
+    hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/fnbnwa_1.png",
   }
 ];
 
@@ -94,7 +118,7 @@ export default function Portfolio() {
               rel="noopener noreferrer"
               className="relative block rounded-lg overflow-hidden aspect-square shadow-md group cursor-pointer"
             >
-              {/* Portfolio item content stays exactly the same */}
+              {/* Base Image */}
               <div className="absolute inset-0">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
@@ -103,11 +127,12 @@ export default function Portfolio() {
                 <div
                   className="absolute inset-0"
                   style={{
-                    background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.99) 100%)",
+                    background: "linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%)",
                   }}
                 />
               </div>
 
+              {/* Hover Image */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
@@ -116,11 +141,15 @@ export default function Portfolio() {
                 <div className="absolute inset-0 bg-black bg-opacity-30" />
               </div>
 
+              {/* Text Overlay */}
               <div className="absolute inset-0 flex flex-col justify-end items-center p-4 pb-20 text-center transition-opacity duration-300 group-hover:opacity-0">
-                <h3 className="text-white text-xl md:text-2xl font-semibold font-heading mb-2">{title}</h3>
-                <p className="text-white text-sm mb-1">{subtitle}</p>
-                <p className="text-white text-xs italic">{createdBy}</p>
+                <h3 className="text-gray-100 dark:text-gray-100 text-xl md:text-2xl font-semibold font-heading mb-2">
+                  {title}
+                </h3>
+                <p className="text-gray-100 dark:text-gray-100 text-sm mb-1">{subtitle}</p>
+                <p className="text-gray-100 dark:text-gray-100 text-xs italic">{createdBy}</p>
               </div>
+
             </a>
           ))}
         </div>

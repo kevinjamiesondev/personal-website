@@ -28,6 +28,10 @@ const testimonials = [
   {
     text: `Kevin has been an integral part of my experience at DealerOn. He brings a thoughtful, solutions-oriented approach to every challenge. Whether it's debugging complex code or contributing insightful ideas to design discussions, his attention to detail and passion for his craft are evident in everything he does.<br /><br />Always seeking new ways to improve his skills and refine his approach, he is not only a strong developer but also a forward-thinking team member. His commitment to growth and excellence sets him apart.`,
     name: "Amanda D. – DealerOn",
+  },
+  {
+    text: `I had the pleasure of working alongside Kevin as a fellow web developer at DealerOn, and I can confidently say he was a highly skilled, reliable, and collaborative team member. From day one, Kevin showed strong technical ability in front-end development. He consistently wrote clean, maintainable code and quickly adopted best practices, especially when it came to ADA compliance.<br /><br />What stood out most about Kevin was his thoughtful approach to solving problems. Whether addressing bugs, implementing new features, or jumping in to support others, he always approached challenges with professionalism and a steady mindset. He also made meaningful contributions to code reviews, offering helpful feedback that significantly enhanced our overall work.`,
+    name: "Perla O. – DealerOn",
   }
 ];
 

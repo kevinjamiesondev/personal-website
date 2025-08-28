@@ -74,37 +74,38 @@ export default function App() {
     <BrowserRouter>
       <div className="relative">
       
-{/* Floating Theme Toggle Button */}
-<button
-  onClick={toggleTheme}
-  className="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-gray-700 dark:bg-gray-200 flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
-  aria-label="Toggle Theme"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-8 w-8 text-white dark:text-gray-900"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    {theme === "dark" ? (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"
-      />
-    ) : (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M12 3v1m0 16v1m8.66-9H21m-18 0H3m15.36 6.36l.7.7M4.94 5.64l.7.7M18.36 5.64l-.7.7M5.64 18.36l-.7.7M12 7a5 5 0 100 10 5 5 0 000-10z"
-      />
-    )}
-  </svg>
-</button>
-
+    {/* Floating Theme Toggle Button */}
+    <button
+      onClick={toggleTheme}
+      className="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-black dark:bg-gray-200 flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+      aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-8 w-8 text-white dark:text-gray-900"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        {theme === "dark" ? (
+          // Sun icon for switching to light
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 3v1m0 16v1m8.66-9H21m-18 0H3m15.36 6.36l.7.7M4.94 5.64l.7.7M18.36 5.64l-.7.7M5.64 18.36l-.7.7M12 7a5 5 0 100 10 5 5 0 000-10z"
+          />
+        ) : (
+          // Moon icon for switching to dark
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"
+          />
+        )}
+      </svg>
+    </button>
 
         <Routes>
           <Route path="/" element={<Home />} />

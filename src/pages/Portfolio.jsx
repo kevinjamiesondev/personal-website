@@ -6,6 +6,14 @@ import Connect from "../components/Connect";
 
 const portfolioItems = [
   {
+    title: "Northwest Arkansas Pool & Spa",
+    subtitle: "Website Development",
+    createdBy: "Freelance Project",
+    url: "https://nwapoolandspa.com/",
+    imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwaps_cover.webp",
+    hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwa-pool-spa_img.webp",
+  },
+  {
     title: "Arkansas Wildlife Federation",
     subtitle: "Website Development",
     createdBy: "Built while working full time at a local agency",
@@ -235,15 +243,7 @@ const portfolioItems = [
     url: "https://nwafarmlink.org/",
     imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwafarmlink_cover.png",
     hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/nwalt_farms_mock.png",
-  },
-  {
-    title: "D. Stefano Building & Restoration",
-    subtitle: "Website Development",
-    createdBy: "Built while working full time at a local agency",
-    url: "https://dstefano.com/",
-    imageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/dstefano_cover.png",
-    hoverImageUrl: "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/dstefano_1.png",
-  },
+  }
 ];
 
 const dealerOnWork = [
