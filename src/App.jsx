@@ -9,10 +9,12 @@ import PortfolioHome from "./components/PortfolioHome";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Connect from "./components/Connect";
+
 import Portfolio from "./pages/Portfolio";
 import BusinessHosting from "./pages/BusinessHosting";
 import WebDesign from "./pages/WebDesign";
 import Projects from "./pages/Projects";
+import DealerOnWork from "./pages/DealerOn";
 
 function Home() {
   return (
@@ -82,7 +84,7 @@ export default function App() {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8 text-white dark:text-gray-900"
+        className="h-8 w-8 text-white dark:text-blue-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -113,6 +115,7 @@ export default function App() {
           <Route path="/hosting" element={<BusinessHosting />} />
           <Route path="/web-design" element={<WebDesign />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/dealeron" element={<DealerOnWork />} />
         </Routes>
       </div>
     </BrowserRouter>
