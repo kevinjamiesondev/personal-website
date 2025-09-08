@@ -102,11 +102,12 @@ export default function Portfolio() {
     <section id="portfolio" className="py-12 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4">
         {/* Scrolling Heading */}
-        <div className="overflow-hidden min-h-[6rem] flex items-center mb-10">
-          <h2 className="inline-block md:animate-marquee text-5xl sm:text-6xl md:text-7xl font-heading font-bold text-gray-900 dark:text-white leading-[1.2] pb-1 max-w-full overflow-hidden whitespace-normal md:whitespace-nowrap text-center md:text-left">
+        <div className="overflow-hidden min-h-[8rem] flex items-center mb-10">
+          <h2 className="inline-block md:animate-marquee text-5xl sm:text-6xl md:text-7xl font-heading font-bold text-gray-900 dark:text-white leading-none">
             Web Design & Development
           </h2>
         </div>
+
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

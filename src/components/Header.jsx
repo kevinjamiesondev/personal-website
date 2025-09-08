@@ -30,14 +30,13 @@ export default function Header() {
   }, []);
 
   return (
-  <header
-    className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled
-        ? "bg-white dark:bg-gray-900 shadow-md"
-        : "bg-white/0 dark:bg-gray-900/0"
-    }`}
-  >
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between p-4">
+   <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        ${scrolled ? "bg-white dark:bg-gray-900 shadow-md" : "bg-transparent dark:bg-transparent"} 
+      `}
+    >
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between p-4 
+                      bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent">
         {/* Logo */}
         <a href="/">
           <img
@@ -86,9 +85,10 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Mobile Hamburger Button */}
+      {/* Mobile Hamburger */}
         <button
-          className="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none bg-white/90 dark:bg-gray-900/90 p-2 rounded"
+          className="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none
+                     bg-white dark:bg-gray-900 p-2 rounded"
           aria-label="Toggle menu"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -110,9 +110,9 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Dropdown */}
       {isOpen && (
-        <nav className="absolute top-full left-0 right-0 bg-white/90 dark:bg-gray-900/90 flex flex-col space-y-4 p-6 md:hidden text-center z-40">
+        <nav className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 flex flex-col space-y-4 p-6 md:hidden text-center z-40 rounded-b-lg shadow-lg">
           <a
             href="/portfolio"
             className="text-gray-900 dark:text-gray-100 text-xl"
@@ -138,7 +138,7 @@ export default function Header() {
             href="https://www.linkedin.com/in/kevin-jamieson-9417828a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-gray-900 dark:text-gray-100 px-4 py-2 rounded-md border-2 border-blue-500 dark:border-blue-400 animate-pulse-blue hover:bg-blue-500 dark:hover:bg-blue-400 hover:text-white transition"
+            className="inline-block text-gray-900 dark:text-gray-100 px-4 py-2 rounded-md border-2 border-blue-500 dark:border-blue-400 animate-pulse-blue hover:bg-blue-500 dark:hover:bg-[#0060e3] hover:text-white transition"
             onClick={() => setIsOpen(false)}
           >
             available for work

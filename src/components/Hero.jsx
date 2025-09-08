@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section
-      className="relative w-full h-[70vh] md:h-screen bg-white dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden"
+      className="relative w-full h-[90vh] md:h-screen bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden"
       style={{
         backgroundImage:
           "url('/images/ar-hills_hero-scaled-1.webp')",
