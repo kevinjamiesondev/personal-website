@@ -10,7 +10,7 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
- 
+
   // Close menu on window resize
   useEffect(() => {
     const closeMenuOnResize = () => {
@@ -30,13 +30,19 @@ export default function Header() {
   }, []);
 
   return (
-   <header
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${scrolled ? "bg-white dark:bg-gray-900 shadow-md" : "bg-transparent dark:bg-transparent"} 
+        ${
+          scrolled
+            ? "bg-white dark:bg-gray-900 shadow-md"
+            : "bg-transparent dark:bg-transparent"
+        } 
       `}
     >
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between p-4 
-                      bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent">
+      <div
+        className="max-w-7xl mx-auto px-4 flex items-center justify-between p-4 
+                      bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent"
+      >
         {/* Logo */}
         <a href="/">
           <img
@@ -55,6 +61,15 @@ export default function Header() {
                        after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             portfolio
+          </a>
+
+          <a
+            href="/dealeron"
+            className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
+                       after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
+                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
+          >
+            dealeron projects
           </a>
 
           <a
@@ -85,7 +100,7 @@ export default function Header() {
           </a>
         </nav>
 
-      {/* Mobile Hamburger */}
+        {/* Mobile Hamburger */}
         <button
           className="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none
                      bg-white dark:bg-gray-900 p-2 rounded"
@@ -119,6 +134,13 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             portfolio
+          </a>
+          <a
+            href="/dealeron"
+            className="text-gray-900 dark:text-gray-100 text-xl"
+            onClick={() => setIsOpen(false)}
+          >
+            dealeron projects
           </a>
           <a
             href="/hosting"
