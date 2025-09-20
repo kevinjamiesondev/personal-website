@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import Header from "./components/Header";
@@ -12,9 +12,18 @@ import Connect from "./components/Connect";
 
 import Portfolio from "./pages/Portfolio";
 import BusinessHosting from "./pages/BusinessHosting";
-import WebDesign from "./pages/WebDesign";
-import Projects from "./pages/Projects";
 import DealerOnWork from "./pages/DealerOn";
+import ContactMe from "./pages/ContactMe";
+
+// ScrollToTop component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0); // instantly jump to top
+  }, [pathname]);
+
+  return null;
+}
 
 function Home() {
   return (
@@ -57,7 +66,6 @@ export default function App() {
         document.documentElement.classList.remove("dark");
       }
     } else {
-      // No saved theme → default dark
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
     }
@@ -77,6 +85,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop /> {/* ensures page always starts at top on route change */}
       <div className="relative">
         {/* Floating Theme Toggle Button */}
         <button
@@ -94,7 +103,6 @@ export default function App() {
             stroke="currentColor"
           >
             {theme === "dark" ? (
-              // Sun icon for switching to light
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -102,7 +110,6 @@ export default function App() {
                 d="M12 3v1m0 16v1m8.66-9H21m-18 0H3m15.36 6.36l.7.7M4.94 5.64l.7.7M18.36 5.64l-.7.7M5.64 18.36l-.7.7M12 7a5 5 0 100 10 5 5 0 000-10z"
               />
             ) : (
-              // Moon icon for switching to dark
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -117,9 +124,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/hosting" element={<BusinessHosting />} />
-          <Route path="/web-design" element={<WebDesign />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/dealeron" element={<DealerOnWork />} />
+          <Route path="/contact" element={<ContactMe />} />
         </Routes>
       </div>
     </BrowserRouter>

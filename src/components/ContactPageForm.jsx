@@ -1,16 +1,12 @@
-export default function Contact() {
+export default function ContactPageForm() {
   return (
     <section
       id="contact"
-      className="max-w-5xl mx-auto py-16 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scroll-mt-20"
+      className="max-w-4xl mx-auto py-16 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white scroll-mt-20"
     >
-      <h2 className="text-5xl font-heading font-bold mb-6 text-center">
-        Want to know more?
-      </h2>
-      <p className="text-lg mb-8 font-body text-center max-w-none mx-auto">
-        Need help with your website? Whether you’re just starting out, need a
-        refresh, or facing tech issues, I’m here to help. Send me a message
-        today, and let’s talk about how I can support your online goals.
+      <p className="text-base md:text-lg mb-6 font-body text-center max-w-xl mx-auto">
+        I’d love to hear from you! Fill out the form below, and I’ll get back to
+        you as soon as possible.
       </p>
 
       <form
@@ -29,7 +25,7 @@ export default function Contact() {
             name="name"
             placeholder="Your Name"
             required
-            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-[#0060e3]"
+            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-white border border-black dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-white"
           />
         </div>
 
@@ -44,7 +40,7 @@ export default function Contact() {
             name="email"
             placeholder="Your Email"
             required
-            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-[#0060e3]"
+            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-white border border-black dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-white"
           />
         </div>
 
@@ -59,7 +55,7 @@ export default function Contact() {
             rows="5"
             placeholder="Your Message"
             required
-            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-[#0060e3]"
+            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-white border border-black dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-white"
           ></textarea>
         </div>
 

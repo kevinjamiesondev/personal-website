@@ -3,7 +3,6 @@
 import Header from "../components/Header";
 import Contact from "../components/Contact";
 import Connect from "../components/Connect";
-import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -18,7 +17,8 @@ const projects = [
       "Contributed to redesigns after Sincro acquisition",
     ],
     projects: [
-      { title: "Homepage Redesign Example", link: "/projects/dealeron" }    ],
+      { title: "Homepage Redesign Example", link: "/projects/dealeron" },
+    ],
   },
   {
     company: "Simplemachine",
@@ -31,50 +31,48 @@ const projects = [
       "Worked with small business clients",
       "Handled branding, dev, and ongoing support",
     ],
-    projects: [
-      { title: "View ", link: "/projects/simplemachine-site1" }
-    ],
+    projects: [{ title: "View ", link: "/projects/simplemachine-site1" }],
   },
 ];
 
 export default function ProjectsTimeline() {
   return (
     <>
-    
-    <Header />
+      <Header />
 
       {/* Hosting Hero */}
       <section
-      className="relative w-full h-[40vh] md:h-screen bg-[#1a1a1a] bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden"
-      style={{
-        backgroundImage:
-        "url('/images/deer_hero-scaled-1.webp')",
-      }}
+        className="relative w-full h-[40vh] md:h-screen bg-[#1a1a1a] bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden"
+        style={{
+          backgroundImage: "url('/images/deer_hero-scaled-1.webp')",
+        }}
       >
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/40 via-[#1a1a1a]/80 to-[#4E3629]/90"></div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a]/40 via-[#1a1a1a]/80 to-[#4E3629]/90"></div>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 md:px-12">
-        <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4">
-          Professional Projects
-        </h1>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 md:px-12">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4">
+            Professional Projects
+          </h1>
 
-        <p className="text-lg md:text-xl font-body font-semibold mb-8 max-w-1xl">
-          Real projects. Real results. Web design and development that works.
-        </p>
+          <p className="text-lg md:text-xl font-body font-semibold mb-8 max-w-1xl">
+            Real projects. Real results. Web design and development that works.
+          </p>
 
-        <a
-          href="#learn-more"
-          className="bg-[#0060e3] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition transform duration-200"
-        >
-          Learn more
-        </a>
-      </div>
-    </section>
-    
+          <a
+            href="#learn-more"
+            className="bg-[#0060e3] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition transform duration-200"
+          >
+            Learn more
+          </a>
+        </div>
+      </section>
+
       <div id="learn-more" className="max-w-4xl mx-auto pt-20 p-6">
-        <h1 className="text-3xl font-bold mb-8 text-center">Projects Timeline</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center">
+          Projects Timeline
+        </h1>
         <div className="relative border-l border-gray-300 ml-3">
           {projects.map((job, index) => (
             <motion.div

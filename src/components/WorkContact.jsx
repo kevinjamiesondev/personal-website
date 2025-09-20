@@ -2,13 +2,13 @@ export default function WorkContact() {
   return (
     <section
       id="contact"
-      className="max-w-5xl mx-auto py-16 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white scroll-mt-20"
+      className="max-w-4xl mx-auto py-16 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white scroll-mt-20"
     >
       <h2 className="text-5xl font-heading font-bold mb-6 text-center">
         Let’s Connect
       </h2>
       <p className="text-lg mb-8 font-body text-center max-w-4xl mx-auto">
-        Interested in my work or want to chat about potential opportunities? 
+        Interested in my work or want to chat about potential opportunities?
         Feel free to reach out using the form below—I’d be glad to connect.
       </p>
 
@@ -19,7 +19,9 @@ export default function WorkContact() {
       >
         {/* Name */}
         <div>
-          <label htmlFor="name" className="sr-only">Your Name</label>
+          <label htmlFor="name" className="sr-only">
+            Your Name
+          </label>
           <input
             id="name"
             type="text"
@@ -32,7 +34,9 @@ export default function WorkContact() {
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="sr-only">Your Email</label>
+          <label htmlFor="email" className="sr-only">
+            Your Email
+          </label>
           <input
             id="email"
             type="email"
@@ -45,7 +49,9 @@ export default function WorkContact() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="sr-only">Your Message</label>
+          <label htmlFor="message" className="sr-only">
+            Your Message
+          </label>
           <textarea
             id="message"
             name="message"
@@ -57,7 +63,11 @@ export default function WorkContact() {
         </div>
 
         {/* Redirect after submission */}
-        <input type="hidden" name="_redirect" value="https://yourwebsite.com/" />
+        <input
+          type="hidden"
+          name="_redirect"
+          value="https://yourwebsite.com/"
+        />
 
         {/* Submit */}
         <button
@@ -70,13 +80,14 @@ export default function WorkContact() {
 
       {/* Direct email */}
       <p className="text-center mt-6 text-lg font-body">
-        Prefer email? Reach me directly at{' '}
+        Prefer email? Reach me directly at{" "}
         <a
           href="mailto:kevinjamiesondev@gmail.com"
           className="text-[#0060e3] underline"
         >
           kevinjamiesondev@gmail.com
-        </a>.
+        </a>
+        .
       </p>
     </section>
   );

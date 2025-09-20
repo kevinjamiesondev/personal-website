@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -54,50 +55,47 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 font-heading">
-          <a
-            href="/portfolio"
+          <Link
+            to="/portfolio"
             className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
-                       after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
+               after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             portfolio
-          </a>
-
-          <a
-            href="/dealeron"
+          </Link>
+          <Link
+            to="/dealeron"
             className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
-                       after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
+               after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             dealeron projects
-          </a>
-
-          <a
-            href="/hosting"
+          </Link>
+          <Link
+            to="/hosting"
             className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
-                       after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
+               after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             website hosting
-          </a>
-
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
-                       after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
-                       after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
+               after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             contact
-          </a>
-
+          </Link>
           <a
             href="https://www.linkedin.com/in/kevin-jamieson-9417828a/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold text-gray-900 dark:text-gray-100 px-3 py-1 lowercase rounded-md border-2 border-blue-700 dark:border-blue-400 animate-pulse-blue hover:bg-blue-600 dark:hover:bg-[#0060e3] hover:text-white transition"
           >
-            available for work
-          </a>
+            {" "}
+            available for work{" "}
+          </a>{" "}
         </nav>
 
         {/* Mobile Hamburger */}
@@ -128,34 +126,34 @@ export default function Header() {
       {/* Mobile Dropdown */}
       {isOpen && (
         <nav className="absolute top-full left-0 right-0 bg-white dark:bg-gray-900 flex flex-col space-y-4 p-6 md:hidden text-center z-40 rounded-b-lg shadow-lg">
-          <a
-            href="/portfolio"
+          <Link
+            to="/portfolio"
             className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             portfolio
-          </a>
-          <a
-            href="/dealeron"
+          </Link>
+          <Link
+            to="/dealeron"
             className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             dealeron projects
-          </a>
-          <a
-            href="/hosting"
+          </Link>
+          <Link
+            to="/hosting"
             className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             website hosting
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             contact
-          </a>
+          </Link>
           <a
             href="https://www.linkedin.com/in/kevin-jamieson-9417828a/"
             target="_blank"
@@ -163,8 +161,9 @@ export default function Header() {
             className="inline-block text-gray-900 dark:text-gray-100 px-4 py-2 rounded-md border-2 border-blue-500 dark:border-blue-400 animate-pulse-blue hover:bg-blue-500 dark:hover:bg-[#0060e3] hover:text-white transition"
             onClick={() => setIsOpen(false)}
           >
-            available for work
-          </a>
+            {" "}
+            available for work{" "}
+          </a>{" "}
         </nav>
       )}
     </header>

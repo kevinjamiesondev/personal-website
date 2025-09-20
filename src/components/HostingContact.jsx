@@ -8,7 +8,9 @@ export default function HostingContact() {
         Want to Know More About Hosting?
       </h2>
       <p className="text-lg mb-8 font-body text-center max-w-none mx-auto">
-        Need hosting for your website? I offer a reliable hosting plan to keep your site online and running smoothly. Fill out the form below, and I’ll get back to you with details on how to get started.
+        Need hosting for your website? I offer a reliable hosting plan to keep
+        your site online and running smoothly. Fill out the form below, and I’ll
+        get back to you with details on how to get started.
       </p>
 
       <form
@@ -18,7 +20,9 @@ export default function HostingContact() {
       >
         {/* Name */}
         <div>
-          <label htmlFor="name" className="sr-only">Your Name</label>
+          <label htmlFor="name" className="sr-only">
+            Your Name
+          </label>
           <input
             id="name"
             type="text"
@@ -31,7 +35,9 @@ export default function HostingContact() {
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="sr-only">Your Email</label>
+          <label htmlFor="email" className="sr-only">
+            Your Email
+          </label>
           <input
             id="email"
             type="email"
@@ -44,7 +50,9 @@ export default function HostingContact() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="sr-only">Your Message</label>
+          <label htmlFor="message" className="sr-only">
+            Your Message
+          </label>
           <textarea
             id="message"
             name="message"
@@ -56,7 +64,11 @@ export default function HostingContact() {
         </div>
 
         {/* Redirect after submission */}
-        <input type="hidden" name="_redirect" value="https://yourwebsite.com/" />
+        <input
+          type="hidden"
+          name="_redirect"
+          value="https://yourwebsite.com/"
+        />
 
         {/* Submit */}
         <button
@@ -66,6 +78,17 @@ export default function HostingContact() {
           Send message
         </button>
       </form>
+      {/* Direct email */}
+      <p className="text-center mt-6 text-lg font-body">
+        Prefer email? Reach me directly at{" "}
+        <a
+          href="mailto:kevinjamiesondev@gmail.com"
+          className="text-[#0060e3] underline"
+        >
+          kevinjamiesondev@gmail.com
+        </a>
+        .
+      </p>
     </section>
   );
 }

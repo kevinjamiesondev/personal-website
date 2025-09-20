@@ -306,42 +306,6 @@ const portfolioItems = [
   },
 ];
 
-const dealerOnWork = [
-  {
-    title: "Homepage Redesign Example",
-    subtitle: "DealerOn",
-    description:
-      "Custom homepage redesign for automotive dealerships, focusing on clean design, accessibility, and page speed.",
-    url: "/projects/dealeron-homepage",
-    imageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/dealeron_homepage.png",
-    hoverImageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/dealeron_homepage_hover.png",
-  },
-  {
-    title: "Content Migration Case Study",
-    subtitle: "DealerOn",
-    description:
-      "Migrated large content sections for dealerships post-Sincro acquisition, improving performance and accessibility.",
-    url: "/projects/dealeron-migration",
-    imageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/dealeron_migration.png",
-    hoverImageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/dealeron_migration_hover.png",
-  },
-  {
-    title: "Bonus Design Concepts",
-    subtitle: "DealerOn",
-    description:
-      "Additional designs created during redesign projects that weren’t implemented but showcase style and UX.",
-    url: "#",
-    imageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/dealeron_bonus.png",
-    hoverImageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/dealeron_bonus_hover.png",
-  },
-];
-
 export default function Portfolio() {
   return (
     <>

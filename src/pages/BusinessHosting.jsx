@@ -3,8 +3,8 @@ import Header from "../components/Header";
 import HostingContact from "../components/HostingContact";
 import Connect from "../components/Connect";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function BusinessHosting() {
   return (
@@ -15,9 +15,9 @@ export default function BusinessHosting() {
           name="description"
           content="Fast, secure, and fully managed WordPress hosting tailored for businesses in Northwest Arkansas and beyond. Reliable performance with personal support you can trust."
         />
-        <meta 
-          name="keywords" 
-          content="Managed WordPress hosting, secure WordPress hosting, web hosting services, Northwest Arkansas" 
+        <meta
+          name="keywords"
+          content="Managed WordPress hosting, secure WordPress hosting, web hosting services, Northwest Arkansas"
         />
         <link rel="canonical" href="https://kevinjamiesondev.com/hosting" />
       </Helmet>
@@ -26,7 +26,7 @@ export default function BusinessHosting() {
 
       {/* Hosting Hero */}
       <section
-        className="relative w-full h-[90vh] md:h-screen bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden"
+        className="relative w-full h-[80vh] md:h-screen bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden flex items-center justify-center"
         style={{
           backgroundImage: "url('/images/deer_hero-scaled-1.webp')",
         }}
@@ -54,7 +54,10 @@ export default function BusinessHosting() {
       </section>
 
       {/* Hosting Overview Section */}
-      <section id="learn-more" className="py-16 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scroll-mt-20">
+      <section
+        id="learn-more"
+        className="py-16 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 scroll-mt-20"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Column - Description */}
@@ -63,27 +66,92 @@ export default function BusinessHosting() {
                 Optimized Hosting for Your WordPress Site
               </h2>
               <p className="font-body mb-4 text-gray-800 dark:text-gray-300">
-                Your website deserves fast, secure, and reliable hosting. With my Managed WordPress hosting, your site will load quickly, stay online consistently, and remain protected with regular security updates. Optimized for WordPress, my hosting ensures your website performs at its best.
+                Your website deserves fast, secure, and reliable hosting. With
+                my Managed WordPress hosting, your site will load quickly, stay
+                online consistently, and remain protected with regular security
+                updates. Optimized for WordPress, my hosting ensures your
+                website performs at its best.
               </p>
 
               <p className="font-body text-gray-800 dark:text-gray-300">
-                Whether you’re just starting out or running a growing business, my hosting packages are designed to fit your needs. With SSL certification, daily backups, and top-notch support, you can focus on your business while I take care of your website. Not on WordPress? No problem — I can still host your site files and ensure everything runs smoothly.
+                Whether you’re just starting out or running a growing business,
+                my hosting packages are designed to fit your needs. With SSL
+                certification, daily backups, and top-notch support, you can
+                focus on your business while I take care of your website. Not on
+                WordPress? No problem — I can still host your site files and
+                ensure everything runs smoothly.
               </p>
             </div>
 
             {/* Right Column - Features + Price */}
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow text-center border border-gray-200 dark:border-gray-700">
-              <h3 className="text-3xl font-semibold mb-4 text-gray-900 dark:text-white">$99 / mo</h3>
+              <h3 className="text-3xl font-semibold mb-4 text-gray-900 dark:text-white">
+                $99 / mo
+              </h3>
               <ul className="text-left mb-6 space-y-2 text-gray-800 dark:text-gray-200">
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Extremely fast and reliable hosting with NVMe SSD storage</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />High uptime infrastructure (aiming for 99.99% reliability)</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Free SSL certificate included</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Content Delivery Network (CDN) for faster loading</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Daily and on-demand website backups</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Regular updates to WordPress core software and plugins</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Basic security monitoring</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Uptime monitoring</li>
-                <li><FontAwesomeIcon icon={faCheck} className="text-green-500 mr-2" />Technical support for hosting and maintenance-related issues</li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Extremely fast and reliable hosting with NVMe SSD storage
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  High uptime infrastructure (aiming for 99.99% reliability)
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Free SSL certificate included
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Content Delivery Network (CDN) for faster loading
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Daily and on-demand website backups
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Regular updates to WordPress core software and plugins
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Basic security monitoring
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Uptime monitoring
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    className="text-green-500 mr-2"
+                  />
+                  Technical support for hosting and maintenance-related issues
+                </li>
               </ul>
 
               <a
