@@ -83,7 +83,7 @@ export default function HostingContact() {
         Prefer email? Reach me directly at{" "}
         <a
           href="mailto:kevinjamiesondev@gmail.com"
-          className="text-[#0060e3] underline"
+          className="text-gray-300 underline"
         >
           kevinjamiesondev@gmail.com
         </a>

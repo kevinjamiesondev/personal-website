@@ -17,7 +17,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -34,7 +35,9 @@ a {
   text-decoration: inherit;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   width: 100%;
 }
 
@@ -61,15 +64,37 @@ button:focus-visible {
 }
 
 .marquee-fade {
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 @keyframes marquee-fade-in-out {
-  0% { opacity: 0; transform: translateX(100%); }
-  10% { opacity: .8; }
-  90% { opacity: 1; }
-  100% { opacity: 0; transform: translateX(-100%); }
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 }
 
 .animate-marquee {
