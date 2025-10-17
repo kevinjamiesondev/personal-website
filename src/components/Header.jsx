@@ -69,7 +69,7 @@ export default function Header() {
                after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
                after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
-            dealeron projects
+            work at dealeron
           </Link>
           <Link
             to="/hosting"
@@ -138,7 +138,7 @@ export default function Header() {
             className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
-            dealeron projects
+            work at dealeron
           </Link>
           <Link
             to="/hosting"

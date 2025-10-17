@@ -38,7 +38,7 @@ export default function Connect() {
 
       {/* Copyright */}
       <p className="text-sm select-none text-gray-700 dark:text-gray-300 transition-colors duration-300">
-        © 2025 Kevin Jamieson. All rights reserved.
+        © 2025 Kevin Jamieson Dev LLC. All rights reserved.
       </p>
     </section>
   );
