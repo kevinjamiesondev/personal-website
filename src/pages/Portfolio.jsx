@@ -6,9 +6,17 @@ import Connect from "../components/Connect";
 
 const portfolioItems = [
   {
+    title: "King's Lawn Care",
+    subtitle: "Website Development",
+    createdBy: "Developed under Kevin Jamieson Dev LLC",
+    url: "https://kingslawncare.com/",
+    imageUrl: "/images/lawn-care.webp",
+    hoverImageUrl: "/images/kings_img.png",
+  },
+  {
     title: "Northwest Arkansas Pool & Spa",
     subtitle: "Website Development",
-    createdBy: "Freelance Project",
+    createdBy: "Developed under Kevin Jamieson Dev LLC",
     url: "https://nwapoolandspa.com/",
     imageUrl:
       "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwaps_cover.webp",
