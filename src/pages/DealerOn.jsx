@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet";
-import Lightbox from "yet-another-react-lightbox";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/styles.css";
+import React, { useState } from "react"
+import { Helmet } from "react-helmet"
+import Lightbox from "yet-another-react-lightbox"
+import Zoom from "yet-another-react-lightbox/plugins/zoom"
+import "yet-another-react-lightbox/styles.css"
 
-import Header from "../components/Header";
-import WorkContact from "../components/WorkContact.jsx";
-import Connect from "../components/Connect";
+import Header from "../components/Header"
+import WorkContact from "../components/WorkContact.jsx"
+import Connect from "../components/Connect"
 
 // Galleries
 const customBuilds = [
@@ -30,7 +30,7 @@ const customBuilds = [
     src: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/vw_2-scaled.webp",
     title: "Volkswagen Interior Page 2",
   },
-];
+]
 
 const homepageBuilds = [
   {
@@ -45,7 +45,7 @@ const homepageBuilds = [
     src: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/homepage_ford.webp",
     title: "Dealer 3 Homepage",
   },
-];
+]
 
 const homepageMockups = [
   {
@@ -60,18 +60,18 @@ const homepageMockups = [
     src: "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/Landing-page-Light-Nav-scaled.png",
     title: "Light Nav Homepage Design",
   },
-];
+]
 
 export default function DealerOnWork() {
-  const [open, setOpen] = useState(false);
-  const [index, setIndex] = useState(0);
-  const [activeGallery, setActiveGallery] = useState("custom");
+  const [open, setOpen] = useState(false)
+  const [index, setIndex] = useState(0)
+  const [activeGallery, setActiveGallery] = useState("custom")
 
   const slides = {
     custom: customBuilds,
     homepageBuilds: homepageBuilds,
     homepageMockups: homepageMockups,
-  }[activeGallery];
+  }[activeGallery]
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
@@ -87,18 +87,20 @@ export default function DealerOnWork() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[90vh] md:h-screen bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden"
+        className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage:
-            "url('https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/bg-header_do.webp')",
+          backgroundImage: "url('/images/do_hero-bg.webp')",
         }}
       >
+        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100/40 via-gray-100/80 to-[#4E3629]/90 dark:from-gray-900/40 dark:via-gray-900/80 dark:to-[#4E3629]/90"></div>
+
+        {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12">
           <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4 text-gray-900 dark:text-white">
             Frontend Web Development at DealerOn
           </h1>
-          <p className="text-base md:text-lg font-body font-semibold mb-8 max-w-6xl text-gray-800 dark:text-gray-200">
+          <p className="text-base md:text-lg font-body font-semibold mb-6 max-w-6xl text-gray-800 dark:text-gray-200">
             Building responsive, accessible, and brand-compliant websites for
             automotive dealerships across the U.S. Focused on homepage builds,
             content migrations, and creating fast, user-friendly experiences
@@ -193,9 +195,9 @@ export default function DealerOnWork() {
                 alt={img.title}
                 className="mb-6 rounded-lg shadow-lg supports-[hover:hover]:hover:scale-105 transition-transform cursor-pointer w-full bg-gray-100 dark:bg-gray-800"
                 onClick={() => {
-                  setActiveGallery("custom");
-                  setIndex(idx);
-                  setOpen(true);
+                  setActiveGallery("custom")
+                  setIndex(idx)
+                  setOpen(true)
                 }}
               />
             ))}
@@ -215,9 +217,9 @@ export default function DealerOnWork() {
                 alt={img.title}
                 className="mb-6 rounded-lg shadow-lg supports-[hover:hover]:hover:scale-105 transition-transform cursor-pointer w-full bg-gray-100 dark:bg-gray-800"
                 onClick={() => {
-                  setActiveGallery("homepageBuilds");
-                  setIndex(idx);
-                  setOpen(true);
+                  setActiveGallery("homepageBuilds")
+                  setIndex(idx)
+                  setOpen(true)
                 }}
               />
             ))}
@@ -247,9 +249,9 @@ export default function DealerOnWork() {
                 alt={img.title}
                 className="mb-6 rounded-lg shadow-lg supports-[hover:hover]:hover:scale-105 transition-transform cursor-pointer w-full bg-gray-100 dark:bg-gray-800"
                 onClick={() => {
-                  setActiveGallery("homepageMockups");
-                  setIndex(idx);
-                  setOpen(true);
+                  setActiveGallery("homepageMockups")
+                  setIndex(idx)
+                  setOpen(true)
                 }}
               />
             ))}
@@ -274,5 +276,5 @@ export default function DealerOnWork() {
       </section>
       <Connect />
     </div>
-  );
+  )
 }

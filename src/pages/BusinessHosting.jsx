@@ -1,10 +1,10 @@
-import { Helmet } from "react-helmet";
-import Header from "../components/Header";
-import HostingContact from "../components/HostingContact";
-import Connect from "../components/Connect";
+import { Helmet } from "react-helmet"
+import Header from "../components/Header"
+import HostingContact from "../components/HostingContact"
+import Connect from "../components/Connect"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCheck } from "@fortawesome/free-solid-svg-icons"
 
 export default function BusinessHosting() {
   return (
@@ -26,9 +26,9 @@ export default function BusinessHosting() {
 
       {/* Hosting Hero */}
       <section
-        className="relative w-full h-[80vh] md:h-screen bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden flex items-center justify-center"
+        className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: "url('/images/deer_hero-scaled-1.webp')",
+          backgroundImage: "url('/images/hosting_hero-bg.webp')",
         }}
       >
         {/* Gradient Overlay */}
@@ -36,11 +36,11 @@ export default function BusinessHosting() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4 text-gray-900 dark:text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4 text-gray-900 dark:text-white">
             Managed WordPress Hosting
           </h1>
 
-          <p className="text-lg md:text-xl font-body font-semibold mb-8 max-w-1xl text-gray-800 dark:text-white">
+          <p className="text-base md:text-md lg:text-lg font-body font-semibold mb-6 max-w-2xl text-gray-800 dark:text-white">
             Fast, secure, and reliable hosting optimized for WordPress websites.
           </p>
 
@@ -173,5 +173,5 @@ export default function BusinessHosting() {
         <Connect />
       </section>
     </>
-  );
+  )
 }

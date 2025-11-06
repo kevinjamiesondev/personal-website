@@ -1,25 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 export default function Hero() {
-  const [scrolled, setScrolled] = useState(0);
+  const [scrolled, setScrolled] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      setScrolled(offset);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      const offset = window.scrollY
+      setScrolled(offset)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
-  const opacity = Math.max(0, 1 - scrolled / 300);
-  const translateY = Math.min(scrolled / 2, 60); // moves up to 60px
+  const opacity = Math.max(0, 1 - scrolled / 300)
+  const translateY = Math.min(scrolled / 2, 60) // moves up to 60px
 
   return (
     <section
       className="relative w-full h-[80vh] md:h-screen bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: "url('/images/ar-hills_hero-scaled-1.webp')",
+        backgroundImage: "url('/images/home_hero-bg.webp')",
       }}
     >
       {/* Gradient Overlay */}
@@ -49,5 +49,5 @@ export default function Hero() {
         </a>
       </div>
     </section>
-  );
+  )
 }

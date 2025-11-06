@@ -4,11 +4,6 @@ export default function ContactPageForm() {
       id="contact"
       className="max-w-4xl mx-auto py-16 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white scroll-mt-20"
     >
-      <p className="text-base md:text-lg mb-6 font-body text-center max-w-xl mx-auto">
-        I’d love to hear from you! Fill out the form below, and I’ll get back to
-        you as soon as possible.
-      </p>
-
       <form
         action="https://formspree.io/f/xkgzqrrv"
         method="POST"
@@ -87,5 +82,5 @@ export default function ContactPageForm() {
         .
       </p>
     </section>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const portfolioItems = [
   {
@@ -92,16 +92,6 @@ const portfolioItems = [
       "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/mediamodifier_image-1.jpeg",
   },
   {
-    title: "Inclusion Begins with I",
-    subtitle: "Website Development",
-    createdBy: "Built while working full time at a local agency",
-    url: "https://inclusionbeginswithi.org/",
-    imageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/inclusion_cover.png",
-    hoverImageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/07/inclusion_portfolio.png",
-  },
-  {
     title: "Walnut Farm Montessori School",
     subtitle: "Website Development",
     createdBy: "Built while working full time at a local agency",
@@ -131,7 +121,7 @@ const portfolioItems = [
     hoverImageUrl:
       "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/fnbnwa_1.png",
   },
-];
+]
 
 export default function Portfolio() {
   useEffect(() => {
@@ -139,8 +129,8 @@ export default function Portfolio() {
       duration: 800, // smooth animation
       easing: "ease-in-out", // softer start & end
       once: false, // animate on scroll up/down
-    });
-  }, []);
+    })
+  }, [])
 
   return (
     <section id="portfolio" className="py-12 bg-white dark:bg-gray-900">
@@ -148,7 +138,7 @@ export default function Portfolio() {
         {/* Scrolling Heading */}
         <div className="overflow-hidden min-h-[8rem] flex items-center mb-10">
           <h2 className="inline-block md:animate-marquee text-5xl sm:text-6xl md:text-7xl font-heading font-bold text-gray-900 dark:text-white leading-none">
-            Web Design & Development
+            web design & development
           </h2>
         </div>
 
@@ -222,5 +212,5 @@ export default function Portfolio() {
         </a>
       </div>
     </section>
-  );
+  )
 }
