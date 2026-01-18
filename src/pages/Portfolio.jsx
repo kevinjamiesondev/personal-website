@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet"
 
-import Header from "../components/Header";
-import Contact from "../components/Contact";
-import Connect from "../components/Connect";
+import Header from "../components/Header"
+import Contact from "../components/Contact"
+import Connect from "../components/Connect"
 
 const portfolioItems = [
   {
@@ -302,17 +302,17 @@ const portfolioItems = [
     hoverImageUrl:
       "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/07/horizon_portfolio.png",
   },
-  {
-    title: "NWA Farmlink",
-    subtitle: "Website Development",
-    createdBy: "Built while working full time at a local agency",
-    url: "https://nwafarmlink.org/",
-    imageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwafarmlink_cover.png",
-    hoverImageUrl:
-      "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/nwalt_farms_mock.png",
-  },
-];
+  // {
+  //   title: "NWA Farmlink",
+  //   subtitle: "Website Development",
+  //   createdBy: "Built while working full time at a local agency",
+  //   url: "https://nwafarmlink.org/",
+  //   imageUrl:
+  //     "https://kevinjamiesondev.com/cms/wp-content/uploads/2025/08/nwafarmlink_cover.png",
+  //   hoverImageUrl:
+  //     "https://kevinjamiesondev.com/cms/wp-content/uploads/2024/06/nwalt_farms_mock.png",
+  // },
+]
 
 export default function Portfolio() {
   return (
@@ -394,6 +394,22 @@ export default function Portfolio() {
             )}
           </div>
         </div>
+
+        {/* Selected Work & Experience */}
+        <div className="max-w-4xl mx-auto mt-16 text-center">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+            Alongside freelance projects, I’ve contributed to large-scale,
+            enterprise web platforms, focusing on front-end development,
+            accessibility, and long-term maintainability.
+          </p>
+
+          <a
+            href="/dealeron"
+            className="inline-block font-semibold text-text-[#0060e3] dark:text-[#0060e3] hover:underline"
+          >
+            View selected work →
+          </a>
+        </div>
       </section>
 
       <section className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
@@ -404,5 +420,5 @@ export default function Portfolio() {
         <Connect />
       </section>
     </>
-  );
+  )
 }

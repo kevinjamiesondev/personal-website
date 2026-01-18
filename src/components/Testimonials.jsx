@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from "react"
 
 const testimonials = [
   {
@@ -20,7 +20,7 @@ const testimonials = [
   {
     text: `I had the pleasure of working with Kevin at DealerOn, and he was one of the most reliable and approachable team members I’ve worked with. He’s extremely friendly, quick to help others, and always ready to offer thoughtful guidance when needed.<br /><br />Kevin also took on the role of reviewer for newer contractors, helping them learn best practices and improve their skills. His calm demeanor and clarity made him a go-to person for support. Kevin’s a team player through and through, and any team would be lucky to have him.`,
     name: "Nick G. – DealerOn",
-  },  
+  },
   {
     text: `I had the pleasure of working with Kevin at DealerOn, where we collaborated as Frontend Web Developers. Kevin consistently brought clarity to ambiguous requests and delivered clean, efficient solutions that made projects run smoothly, and his expertise in frontend development was evident throughout. He also played a key role in our team’s growth by reviewing work and offering valuable feedback. Beyond his skills, Kevin makes the workplace enjoyable with his positive attitude and collaborative approach. He is straightforward, reliable, and talented, and any team would be lucky to have him.`,
     name: "Devagya S. – DealerOn",
@@ -32,43 +32,43 @@ const testimonials = [
   {
     text: `I had the pleasure of working alongside Kevin as a fellow web developer at DealerOn, and I can confidently say he was a highly skilled, reliable, and collaborative team member. From day one, Kevin showed strong technical ability in front-end development. He consistently wrote clean, maintainable code and quickly adopted best practices, especially when it came to ADA compliance.<br /><br />What stood out most about Kevin was his thoughtful approach to solving problems. Whether addressing bugs, implementing new features, or jumping in to support others, he always approached challenges with professionalism and a steady mindset. He also made meaningful contributions to code reviews, offering helpful feedback that significantly enhanced our overall work.`,
     name: "Perla O. – DealerOn",
-  }
-];
+  },
+]
 
 export default function TestimonialsSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const touchStartX = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const touchStartX = useRef(null)
 
   const prev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
+    )
+  }
 
   const next = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+    )
+  }
 
   const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
+    touchStartX.current = e.touches[0].clientX
+  }
 
   const handleTouchEnd = (e) => {
-    if (touchStartX.current === null) return;
-    const touchEndX = e.changedTouches[0].clientX;
-    const diffX = touchStartX.current - touchEndX;
+    if (touchStartX.current === null) return
+    const touchEndX = e.changedTouches[0].clientX
+    const diffX = touchStartX.current - touchEndX
 
     if (Math.abs(diffX) > 50) {
       if (diffX > 0) {
-        next();
+        next()
       } else {
-        prev();
+        prev()
       }
     }
-    touchStartX.current = null;
-  };
+    touchStartX.current = null
+  }
 
   return (
     <section className="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-body py-12 px-4">
@@ -109,7 +109,9 @@ export default function TestimonialsSlider() {
                 __html: testimonials[currentIndex].text,
               }}
             />
-            <p className="font-body font-semibold">{testimonials[currentIndex].name}</p>
+            <p className="font-body font-semibold">
+              {testimonials[currentIndex].name}
+            </p>
           </div>
 
           {/* Right Arrow */}
@@ -133,5 +135,5 @@ export default function TestimonialsSlider() {
         </div>
       </div>
     </section>
-  );
+  )
 }

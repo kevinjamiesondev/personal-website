@@ -211,6 +211,22 @@ export default function Portfolio() {
           See more projects
         </a>
       </div>
+
+      {/* Selected Work & Experience */}
+      <div className="max-w-4xl mx-auto mt-16 text-center">
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+          Alongside freelance projects, I’ve contributed to large-scale,
+          enterprise web platforms, focusing on front-end development,
+          accessibility, and long-term maintainability.
+        </p>
+
+        <a
+          href="/dealeron"
+          className="inline-block font-semibold text-text-[#0060e3] dark:text-[#0060e3] hover:underline"
+        >
+          View selected work →
+        </a>
+      </div>
     </section>
   )
 }

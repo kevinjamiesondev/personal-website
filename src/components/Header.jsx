@@ -1,34 +1,34 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   // Handle scroll background
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   // Close menu on window resize
   useEffect(() => {
     const closeMenuOnResize = () => {
-      if (window.innerWidth >= 768) setIsOpen(false);
-    };
-    window.addEventListener("resize", closeMenuOnResize);
-    return () => window.removeEventListener("resize", closeMenuOnResize);
-  }, []);
+      if (window.innerWidth >= 768) setIsOpen(false)
+    }
+    window.addEventListener("resize", closeMenuOnResize)
+    return () => window.removeEventListener("resize", closeMenuOnResize)
+  }, [])
 
   // Close menu on Escape
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === "Escape") setIsOpen(false);
-    };
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
-  }, []);
+      if (e.key === "Escape") setIsOpen(false)
+    }
+    window.addEventListener("keydown", handleEscape)
+    return () => window.removeEventListener("keydown", handleEscape)
+  }, [])
 
   return (
     <header
@@ -63,14 +63,14 @@ export default function Header() {
           >
             portfolio
           </Link>
-          <Link
+          {/* <Link
             to="/dealeron"
             className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
                after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 
                after:bg-blue-600 dark:after:bg-[#0060e3] after:transition-all after:duration-300 hover:after:w-full"
           >
             work at dealeron
-          </Link>
+          </Link> */}
           <Link
             to="/hosting"
             className="relative text-xl font-bold lowercase text-gray-900 dark:text-gray-100 hover:text-black dark:hover:text-white
@@ -133,13 +133,13 @@ export default function Header() {
           >
             portfolio
           </Link>
-          <Link
+          {/* <Link
             to="/dealeron"
             className="text-gray-900 dark:text-gray-100 text-xl"
             onClick={() => setIsOpen(false)}
           >
             work at dealeron
-          </Link>
+          </Link> */}
           <Link
             to="/hosting"
             className="text-gray-900 dark:text-gray-100 text-xl"
@@ -167,5 +167,5 @@ export default function Header() {
         </nav>
       )}
     </header>
-  );
+  )
 }
