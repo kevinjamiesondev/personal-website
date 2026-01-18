@@ -26,7 +26,13 @@ export default function BusinessHosting() {
 
       {/* Hosting Hero */}
       <section
-        className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] bg-gray-100 dark:bg-gray-900 bg-cover bg-center md:bg-fixed sm:bg-scroll overflow-hidden flex items-center justify-center"
+        className="relative w-full 
+             h-[80svh] sm:h-[70vh] md:h-[60vh] lg:h-[75vh]
+             bg-gray-100 dark:bg-gray-900 
+             bg-cover bg-center 
+             md:bg-fixed bg-scroll
+             overflow-hidden 
+             flex items-center justify-center"
         style={{
           backgroundImage: "url('/images/hosting_hero-bg.webp')",
         }}
@@ -36,7 +42,7 @@ export default function BusinessHosting() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4 text-gray-900 dark:text-white">
+          <h1 className="relative z-10 mb-6 md:mb-4 text-3xl md:text-6xl font-heading font-bold text-gray-900 dark:text-white">
             Managed WordPress Hosting
           </h1>
 
@@ -86,7 +92,7 @@ export default function BusinessHosting() {
             {/* Right Column - Features + Price */}
             <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow text-center border border-gray-200 dark:border-gray-700">
               <h3 className="text-3xl font-semibold mb-4 text-gray-900 dark:text-white">
-                $99 / mo
+                $99 / per month
               </h3>
               <ul className="text-left mb-6 space-y-2 text-gray-800 dark:text-gray-200">
                 <li>

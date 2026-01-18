@@ -335,7 +335,7 @@ export default function Portfolio() {
       <section id="portfolio" className="py-12 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4">
           <div className="overflow-hidden min-h-[6rem] flex flex-col items-center mb-10 mt-20 text-center">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 dark:text-white text-center">
+            <h1 className="relative z-10 mb-6 md:mb-4 text-3xl md:text-6xl font-heading font-bold text-gray-900 dark:text-white">
               Featured Work
             </h1>
             <p className="text-xl mt-4 font-body text-gray-700 dark:text-gray-300">
