@@ -51,7 +51,7 @@ export default function ContactMe() {
             href="#contact"
             className="bg-[#0060e3] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition transform duration-200"
           >
-            Send Message
+            Send message
           </a>
         </div>
       </section>
