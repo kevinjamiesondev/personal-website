@@ -71,11 +71,11 @@ export default function ContactPageForm() {
       </form>
 
       {/* Direct email */}
-      <p className="text-center mt-6 text-lg font-body">
+      <p className="text-center mt-6 text-md font-body">
         Prefer email? Reach me directly at{" "}
         <a
           href="mailto:kevinjamiesondev@gmail.com"
-          className="text-gray-300 underline"
+          className="text-gray-700 dark:text-gray-300 underline hover:text-[#0060e3] transition"
         >
           kevinjamiesondev@gmail.com
         </a>

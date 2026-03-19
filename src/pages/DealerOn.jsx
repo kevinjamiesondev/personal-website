@@ -98,9 +98,9 @@ export default function DealerOnWork() {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 md:px-12">
           <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4 text-gray-900 dark:text-white">
-            Frontend Web Development at DealerOn
+            Frontend Development at DealerOn
           </h1>
-          <p className="text-base md:text-lg font-body font-semibold mb-6 max-w-6xl text-gray-800 dark:text-gray-200">
+          <p className="text-lg font-body font-medium mb-8 max-w-6xl text-gray-800 dark:text-white">
             Building responsive, accessible, and brand-compliant websites for
             automotive dealerships across the U.S. Focused on homepage builds,
             content migrations, and creating fast, user-friendly experiences

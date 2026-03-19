@@ -2,93 +2,79 @@ export default function HostingContact() {
   return (
     <section
       id="contact"
-      className="max-w-5xl mx-auto py-16 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white scroll-mt-20"
+      className="max-w-5xl mx-auto py-20 px-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white scroll-mt-20"
     >
-      <h2 className="text-5xl font-heading font-bold mb-6 text-center">
-        Want to Know More About Hosting?
+      {/* Heading */}
+      <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-center">
+        Get help with your website
       </h2>
-      <p className="text-lg mb-8 font-body text-center max-w-none mx-auto">
-        Need hosting for your website? I offer a reliable hosting plan to keep
-        your site online and running smoothly. Fill out the form below, and I’ll
-        get back to you with details on how to get started.
+
+      {/* Intro */}
+      <p className="text-lg text-gray-700 dark:text-gray-300 mb-10 text-center max-w-2xl mx-auto leading-relaxed">
+        If you need hosting, ongoing support, or help with your website, feel
+        free to reach out and I will get back to you as soon as possible.
       </p>
 
+      {/* Form */}
       <form
         action="https://formspree.io/f/xkgzqrrv"
         method="POST"
         className="max-w-xl mx-auto space-y-4"
       >
         {/* Name */}
-        <div>
-          <label htmlFor="name" className="sr-only">
-            Your Name
-          </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-white border border-black dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-white"
-          />
-        </div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          className="w-full px-4 py-3 bg-transparent text-gray-900 dark:text-white border border-gray-300 dark:border-white/20 rounded-lg focus:outline-none focus:border-[#0060e3] transition"
+        />
 
         {/* Email */}
-        <div>
-          <label htmlFor="email" className="sr-only">
-            Your Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-white border border-black dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-white"
-          />
-        </div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          className="w-full px-4 py-3 bg-transparent text-gray-900 dark:text-white border border-gray-300 dark:border-white/20 rounded-lg focus:outline-none focus:border-[#0060e3] transition"
+        />
 
         {/* Message */}
-        <div>
-          <label htmlFor="message" className="sr-only">
-            Your Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-            required
-            className="w-full px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-white border border-black dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1a1a1a] dark:focus:ring-white"
-          ></textarea>
-        </div>
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="How can I help?"
+          required
+          className="w-full px-4 py-3 bg-transparent text-gray-900 dark:text-white border border-gray-300 dark:border-white/20 rounded-lg focus:outline-none focus:border-[#0060e3] transition"
+        ></textarea>
 
-        {/* Redirect after submission */}
+        {/* Redirect */}
         <input
           type="hidden"
           name="_redirect"
           value="https://yourwebsite.com/"
         />
 
-        {/* Submit */}
+        {/* Button */}
         <button
           type="submit"
-          className="bg-[#0060e3] text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition transform duration-200"
+          className="mt-4 bg-[#0060e3] text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-800 transition duration-200"
         >
           Send message
         </button>
       </form>
+
       {/* Direct email */}
-      <p className="text-center mt-6 text-lg font-body">
+      <p className="text-center mt-6 text-md font-body">
         Prefer email? Reach me directly at{" "}
         <a
           href="mailto:kevinjamiesondev@gmail.com"
-          className="text-gray-300 underline"
+          className="text-gray-700 dark:text-gray-300 underline hover:text-[#0060e3] transition"
         >
           kevinjamiesondev@gmail.com
         </a>
         .
       </p>
     </section>
-  );
+  )
 }
